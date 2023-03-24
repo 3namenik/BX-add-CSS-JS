@@ -1,4 +1,6 @@
-<? if (isset($this) && get_class($this) == 'CBitrixComponentTemplate') {
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+if (isset($this) && get_class($this) == 'CBitrixComponentTemplate') {
     $this->addExternalCss(SITE_TEMPLATE_PATH . '/widgets/form-catalog/form-catalog.css');
     $this->addExternalJS(SITE_TEMPLATE_PATH . '/widgets/form-catalog/form-catalog.js');
 } else {
